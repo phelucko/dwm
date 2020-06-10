@@ -147,7 +147,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .HEADING 2 "Basic Programs"
 .LI
 .ITEM
-\f(CWMod+r\fP \(en lf (file browser/manager)
+\f(CWMod+r\fP \(en Open a dmenu to select a file
 .ITEM
 \f(CWMod+R\fP \(en htop (task manager, system monitor that R*dditors use to look cool)
 .ITEM
@@ -161,9 +161,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+W\fP \(en nmtui (for connecting to wireless internet)
 .ITEM
-\f(CWMod+n\fP \(en vimwiki (for notes)
-.ITEM
-\f(CWMod+N\fP \(en newsboat (RSS feed reader)
+\f(CWMod+n\fP \(en newsboat (RSS feed reader)
 .ITEM
 \f(CWMod+F4\fP \(en pulsemixer (audio system control)
 .ITEM
@@ -217,9 +215,9 @@ I use ncmpcpp as a music player, which is a front end for mpd.
 .ITEM
 \f(CWMod+>\fP \(en Toggle playlist looping
 .ITEM
-\f(CWMod+p\fP \(en Toggle pause
+\f(CWMod+p\fP \(en Open a dmenu to select password
 .ITEM
-\f(CWMod+p\fP \(en Force pause music player daemon and all mpv videos
+\f(CWMod+P\fP \(en Toggle pause
 .ITEM
 \f(CWMod+M\fP \(en Mute all audio
 .ITEM
@@ -244,7 +242,7 @@ There are nine tags, active tags are highlighted in the top left.
 .ITEM
 \f(CWMod+Tab\fP \(en Go to previous tag (may also use \f(CW\\\fP for Tab)
 .ITEM
-\f(CWMod+g\fP \(en Go to left tag (hold shift to send window there)
+\f(CWMod+g\fP \(en Open knowledge-base wiki (hold shift to open personal wiki)
 .ITEM
 \f(CWMod+;\fP \(en Go to right tag (hold shift to send window there)
 .ITEM

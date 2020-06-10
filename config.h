@@ -15,8 +15,8 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char dmenufont[]             = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=14", "JoyPixels:pixelsize=14:antialias=true:autohint=true"  };
+static char dmenufont[]             = "monospace:size=14";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -33,8 +33,8 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd1[] = {"st", "-A", "1", "-n", "spterm", "-g", "120x34", "-e", "tmux_archpad", NULL };
+const char *spcmd2[] = {"st", "-A", "1", "-n", "spcalc", "-f", "monospace:size=20", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	*/
 	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
+	{ "firefox",  NULL,       NULL,       	    1 << 1,       0,           0,         0,        -1 },
 	{ "St",       NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
@@ -138,9 +139,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") },
 	{ MODKEY,			XK_w,		spawn,		SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
-	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
-	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("st -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
-	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e lf") },
+	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("st -e abook -C ~/.config/abook/abookrc --datafile ~/.local/share/abook/addressbook") },
+	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e dmenuopen") },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("st -e htop") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
@@ -152,8 +153,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
-	{ MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") },
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") },
+	{ MODKEY,			XK_p,			spawn,		SHCMD("passmenu") },
+	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc toggle") },
 	{ MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
@@ -169,8 +170,8 @@ static Key keys[] = {
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
-	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
-	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
+	{ MODKEY,			XK_g,		spawn,		SHCMD("st -e nvim $XDG_DATA_HOME/wiki/kb/index.md") },
+	{ MODKEY|ShiftMask,		XK_g,		spawn,		SHCMD("st -e nvim $XDG_DATA_HOME/wiki/personal/index.md") },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
@@ -190,8 +191,7 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_n,		spawn,		SHCMD("st -e nvim -c VimwikiIndex") },
-	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
+	{ MODKEY,		  XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
