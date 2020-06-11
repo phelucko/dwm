@@ -101,7 +101,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+j/k\fP \(en Cycle thru windows by their stack order
 .ITEM
-\f(CWMod+Space\fP \(en Make selected window the master (or switch master with 2nd)
+\f(CWMod+Tab\fP \(en Make selected window the master (or switch master with 2nd)
 .ITEM
 \f(CWMod+h/l\fP \(en Change width of master window
 .ITEM
@@ -117,7 +117,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+b\fP \(en Toggle statusbar (may also middle click on desktop)
 .ITEM
-\f(CWMod+v\fP \(en Jump to master window
+\f(CWMod+m\fP \(en Jump to master window
 .LIST OFF
 .HEADING 2 "Window layouts"
 .LI
@@ -134,9 +134,9 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+Y\fP \(en Dwindle mode (similar to Fibonacci)
 .ITEM
-\f(CWMod+u\fP \(en Master on left, other windows in monocle mode
+\f(CWMod+u\fP \(en Monocle mode (all windows fullscreen and cycle through)
 .ITEM
-\f(CWMod+U\fP \(en Monocle mode (all windows fullscreen and cycle through)
+\f(CWMod+U\fP \(en Master on left, other windows in monocle mode
 .ITEM
 \f(CWMod+i\fP \(en Center the master window
 .ITEM
@@ -147,23 +147,27 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .HEADING 2 "Basic Programs"
 .LI
 .ITEM
-\f(CWMod+r\fP \(en Open a dmenu to select a file
+\f(CWMod+c\fP \(en Open dmenu to select a remote connection
 .ITEM
-\f(CWMod+R\fP \(en htop (task manager, system monitor that R*dditors use to look cool)
+\f(CWMod+D\fP \(en Open dmenu to select a URL
+.ITEM
+\f(CWMod+r\fP \(en Open dmenu to select a file
+.ITEM
+\f(CWMod+R\fP \(en vifm (file manager)
 .ITEM
 \f(CWMod+e\fP \(en neomutt (email) \(en Must be first configured by running \f(CWmw add\fP.
 .ITEM
 \f(CWMod+E\fP \(en abook (contacts, addressbook, emails)
 .ITEM
-\f(CWMod+m\fP \(en ncmpcpp (music player)
-.ITEM
-\f(CWMod+w\fP \(en Web browser (Brave by default)
+\f(CWMod+w\fP \(en Web browser (Firefox by default)
 .ITEM
 \f(CWMod+W\fP \(en nmtui (for connecting to wireless internet)
 .ITEM
-\f(CWMod+n\fP \(en newsboat (RSS feed reader)
+\f(CWMod+N\fP \(en newsboat (RSS feed reader)
 .ITEM
-\f(CWMod+F4\fP \(en pulsemixer (audio system control)
+\f(CWMod+p\fP \(en Open dmenu to select a password
+.ITEM
+\f(CWMod+P\fP \(en Open dmenu to select pictures
 .ITEM
 \f(CWMod+Shift+Enter\fP \(en Show/hide dropdown terminal
 .ITEM
@@ -192,8 +196,6 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+F10\fP \(en Unmount a non-essential drive or Android
 .ITEM
-\f(CWMod+F11\fP \(en View webcam
-.ITEM
 \f(CWMod+F12\fP \(en Update dwm's colorscheme if you have changed Xresources
 .ITEM
 \f(CWMod+`\fP \(en Select an emoji to copy to clipboard
@@ -205,7 +207,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 I use ncmpcpp as a music player, which is a front end for mpd.
 .LI
 .ITEM
-\f(CWMod+m\fP \(en ncmpcpp, the music player
+\f(CWMod+n\fP \(en ncmpcpp, the music player
 .ITEM
 \f(CWMod+.\fP \(en Next track
 .ITEM
@@ -215,11 +217,7 @@ I use ncmpcpp as a music player, which is a front end for mpd.
 .ITEM
 \f(CWMod+>\fP \(en Toggle playlist looping
 .ITEM
-\f(CWMod+p\fP \(en Open a dmenu to select password
-.ITEM
-\f(CWMod+P\fP \(en Toggle pause
-.ITEM
-\f(CWMod+M\fP \(en Mute all audio
+\f(CWMod+M\fP \(en Toggle pause
 .ITEM
 \f(CWMod+-\fP \(en Decrease volume (holding shift increases amount)
 .ITEM
@@ -240,7 +238,7 @@ There are nine tags, active tags are highlighted in the top left.
 .ITEM
 \f(CWMod+Shift+(Number)\fP \(en Send window to that tag
 .ITEM
-\f(CWMod+Tab\fP \(en Go to previous tag (may also use \f(CW\\\fP for Tab)
+\f(CWMod+Space\fP \(en Go to previous tag
 .ITEM
 \f(CWMod+g\fP \(en Open knowledge-base wiki (hold shift to open personal wiki)
 .ITEM
@@ -261,11 +259,9 @@ previous recordings as their names are based on their exact times.
 .ITEM
 \f(CWShift+PrintScreen\fP \(en Select area to screenshot
 .ITEM
-\f(CWMod+PrintScreen\fP \(en Opens dmenu menu to select kind of audio/video recording
+\f(CWMod+PrintScreen\fP \(en Opens dmenu to select kind of audio/video recording
 .ITEM
 \f(CWMod+Delete\fP \(en Kills any recording started in the above way.
-.ITEM
-\f(CWMod+Shift+c\fP \(en Toggles a webcam in the bottom right for screencasting.
 .ITEM
 \f(CWMod+ScrollLock\fP \(en Toggle screenkey (if installed) to show keypresses
 .LIST OFF
