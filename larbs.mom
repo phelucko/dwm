@@ -151,9 +151,9 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+D\fP \(en Open dmenu to select a URL
 .ITEM
-\f(CWMod+r\fP \(en Open dmenu to select a file
+\f(CWMod+r\fP \(en Show/hide dropdown terminal
 .ITEM
-\f(CWMod+R\fP \(en vifm (file manager)
+\f(CWMod+R\fP \(en Open dmenu to select a file
 .ITEM
 \f(CWMod+e\fP \(en neomutt (email) \(en Must be first configured by running \f(CWmw add\fP.
 .ITEM
@@ -168,8 +168,6 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 \f(CWMod+p\fP \(en Open dmenu to select a password
 .ITEM
 \f(CWMod+P\fP \(en Open dmenu to select pictures
-.ITEM
-\f(CWMod+Shift+Enter\fP \(en Show/hide dropdown terminal
 .ITEM
 \f(CWMod+'\fP \(en Show/hide dropdown calculator
 .LIST OFF

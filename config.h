@@ -132,41 +132,41 @@ static Key keys[] = {
 	TAGKEYS(			XK_7,		6)
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
-	{ MODKEY,			        XK_0,		          view,		    {.ui = ~0 } },
-	{ MODKEY|ShiftMask,		XK_0,		          tag,		    {.ui = ~0 } },
-	{ MODKEY,			        XK_minus,	        spawn,		  SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask,		XK_minus,	        spawn,		  SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			        XK_equal,	        spawn,		  SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask,		XK_equal,	        spawn,		  SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			        XK_BackSpace,	    spawn,		  SHCMD("sysact") },
-	{ MODKEY|ShiftMask,		XK_BackSpace,	    spawn,		  SHCMD("sysact") },
+	{ MODKEY,			        XK_0,		          view,		      {.ui = ~0 } },
+	{ MODKEY|ShiftMask,		XK_0,		          tag,		      {.ui = ~0 } },
+	{ MODKEY,			        XK_minus,	        spawn,		    SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_minus,	        spawn,		    SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			        XK_equal,	        spawn,		    SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_equal,	        spawn,		    SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			        XK_BackSpace,	    spawn,		    SHCMD("sysact") },
+	{ MODKEY|ShiftMask,		XK_BackSpace,	    spawn,		    SHCMD("sysact") },
 
-	{ MODKEY,			        XK_Tab,	          zoom,		    {0} },
-	{ MODKEY,			        XK_q,		          killclient,	{0} },
-	{ MODKEY|ShiftMask,		XK_q,		          spawn,		  SHCMD("sysact") },
-	{ MODKEY,			        XK_w,		          spawn,		  SHCMD("$BROWSER") },
-	{ MODKEY|ShiftMask,		XK_w,		          spawn,		  SHCMD("$TERMINAL -e sudo nmtui") },
-	{ MODKEY,			        XK_e,		          spawn,		  SHCMD("$TERMINAL -n neomutt -e neomutt ; pkill -RTMIN+12 dwmblocks") },
-	{ MODKEY|ShiftMask,		XK_e,		          spawn,		  SHCMD("$TERMINAL -e abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook") },
-	{ MODKEY,			        XK_r,		          spawn,		  SHCMD("dmenuopen") },
-	{ MODKEY|ShiftMask,		XK_r,		          spawn,		  SHCMD("$TERMINAL -e $XDG_CONFIG_HOME/vifm/scripts/vifmrun") },
-	{ MODKEY,			        XK_t,		          setlayout,	{.v = &layouts[0]} }, /* tile */
-	{ MODKEY|ShiftMask,		XK_t,		          setlayout,	{.v = &layouts[1]} }, /* bstack */
-	{ MODKEY,			        XK_y,		          setlayout,	{.v = &layouts[2]} }, /* spiral */
-	{ MODKEY|ShiftMask,		XK_y,		          setlayout,	{.v = &layouts[3]} }, /* dwindle */
-	{ MODKEY,		          XK_u,		          setlayout,	{.v = &layouts[5]} }, /* monocle */
-	{ MODKEY|ShiftMask,		XK_u,		          setlayout,	{.v = &layouts[4]} }, /* deck */
-	{ MODKEY,			        XK_i,		          setlayout,	{.v = &layouts[6]} }, /* centeredmaster */
-	{ MODKEY|ShiftMask,		XK_i,		          setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
-	{ MODKEY,			        XK_o,		          incnmaster, {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_o,		          incnmaster, {.i = -1 } },
-	{ MODKEY,			        XK_p,			        spawn,		  SHCMD("passmenu") },
-	{ MODKEY,			        XK_p,			        spawn,		  SHCMD("passpictures") },
-	{ MODKEY,			        XK_bracketleft,		spawn,		  SHCMD("mpc seek -10") },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		  SHCMD("mpc seek -60") },
-	{ MODKEY,			        XK_bracketright,	spawn,		  SHCMD("mpc seek +10") },
-	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		  SHCMD("mpc seek +60") },
-	{ MODKEY,			        XK_backslash,		  view,		    {0} },
+	{ MODKEY,			        XK_Tab,	          zoom,		      {0} },
+	{ MODKEY,			        XK_q,		          killclient,	  {0} },
+	{ MODKEY|ShiftMask,		XK_q,		          spawn,		    SHCMD("sysact") },
+	{ MODKEY,			        XK_w,		          spawn,		    SHCMD("$BROWSER") },
+	{ MODKEY|ShiftMask,		XK_w,		          spawn,		    SHCMD("$TERMINAL -e nmtui") },
+	{ MODKEY,			        XK_e,		          spawn,		    SHCMD("$TERMINAL -n neomutt -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ MODKEY|ShiftMask,		XK_e,		          spawn,		    SHCMD("$TERMINAL -e abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook") },
+	{ MODKEY,		          XK_r,	            togglescratch,{.ui = 0} },
+	{ MODKEY|ShiftMask,		XK_r,		          spawn,		    SHCMD("dmenuopen") },
+	{ MODKEY,			        XK_t,		          setlayout,	  {.v = &layouts[0]} }, /* tile */
+	{ MODKEY|ShiftMask,		XK_t,		          setlayout,	  {.v = &layouts[1]} }, /* bstack */
+	{ MODKEY,			        XK_y,		          setlayout,	  {.v = &layouts[2]} }, /* spiral */
+	{ MODKEY|ShiftMask,		XK_y,		          setlayout,	  {.v = &layouts[3]} }, /* dwindle */
+	{ MODKEY,		          XK_u,		          setlayout,	  {.v = &layouts[5]} }, /* monocle */
+	{ MODKEY|ShiftMask,		XK_u,		          setlayout,	  {.v = &layouts[4]} }, /* deck */
+	{ MODKEY,			        XK_i,		          setlayout,	  {.v = &layouts[6]} }, /* centeredmaster */
+	{ MODKEY|ShiftMask,		XK_i,		          setlayout,	  {.v = &layouts[7]} }, /* centeredfloatingmaster */
+	{ MODKEY,			        XK_o,		          incnmaster,   {.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_o,		          incnmaster,   {.i = -1 } },
+	{ MODKEY,			        XK_p,			        spawn,		    SHCMD("passmenu") },
+	{ MODKEY,			        XK_p,			        spawn,		    SHCMD("passpictures") },
+	{ MODKEY,			        XK_bracketleft,		spawn,		    SHCMD("mpc seek -10") },
+	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		    SHCMD("mpc seek -60") },
+	{ MODKEY,			        XK_bracketright,	spawn,		    SHCMD("mpc seek +10") },
+	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		    SHCMD("mpc seek +60") },
+	{ MODKEY,			        XK_backslash,		  view,		      {0} },
 
 	{ MODKEY,			        XK_a,		        togglegaps,	    {0} },
 	{ MODKEY|ShiftMask,		XK_a,		        defaultgaps,	  {0} },
@@ -184,7 +184,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_semicolon,	  shifttag,	      { .i = 1 } },
 	{ MODKEY,			        XK_apostrophe,	togglescratch,	{.ui = 1} },
 	{ MODKEY,			        XK_Return,	    spawn,		      {.v = termcmd } },
-	{ MODKEY|ShiftMask,		XK_Return,	    togglescratch,	{.ui = 0} },
 
 	{ MODKEY,			        XK_z,		        incrgaps,	      {.i = +3 } },
 	{ MODKEY,			        XK_x,		        incrgaps,	      {.i = -3 } },
@@ -258,8 +257,8 @@ static Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,	    spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	      spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		      spawn,		SHCMD("synclient TouchpadOff=0") },
-	{ 0, XF86XK_MonBrightnessUp,	  spawn,		SHCMD("xbacklight -inc 15") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 15") },
+	{ 0, XF86XK_MonBrightnessUp,	  spawn,		SHCMD("sudo light -A 10") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo light -U 10") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
