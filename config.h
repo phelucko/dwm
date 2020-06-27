@@ -9,8 +9,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     	/* 0 means no systray */
 static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh    = 25;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 25;       /* vert outer gap between windows and screen edge */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -64,7 +64,6 @@ static const Rule rules[] = {
 	{ NULL,                       NULL,         "Event Tester",   0,              0,            0,           0,         1,        -1 },
 	{ NULL,                     "spterm",       NULL,       	    SPTAG(0),       0,            1,           1,         0,        -1 },
 	{ NULL,                     "spcalc",       NULL,       	    SPTAG(1),       0,            1,           1,         0,        -1 },
-	{ NULL,                     "neomutt",      NULL,       	    1 << 8,         1,            0,           1,         0,        -1 },
 };
 
 /* layout(s) */
@@ -147,7 +146,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		          spawn,		    SHCMD("sysact") },
 	{ MODKEY,			        XK_w,		          spawn,		    SHCMD("xdotool key super+2 && $BROWSER") },
 	{ MODKEY|ShiftMask,		XK_w,		          spawn,		    SHCMD("$TERMINAL -e nmtui") },
-	{ MODKEY,			        XK_e,		          spawn,		    SHCMD("$TERMINAL -n neomutt -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ MODKEY,			        XK_e,		          spawn,		    SHCMD("$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks") },
 	{ MODKEY|ShiftMask,		XK_e,		          spawn,		    SHCMD("$TERMINAL -e abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook") },
 	{ MODKEY,		          XK_r,	            togglescratch,{.ui = 0} },
 	{ MODKEY|ShiftMask,		XK_r,		          spawn,		    SHCMD("dmenuopen") },
@@ -250,7 +249,7 @@ static Key keys[] = {
 	{ 0, XF86XK_DOS,		            spawn,		SHCMD("$TERMINAL") },
 	{ 0, XF86XK_ScreenSaver,	      spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
 	{ 0, XF86XK_TaskPane,		        spawn,		SHCMD("$TERMINAL -e htop") },
-	{ 0, XF86XK_Mail,		            spawn,		SHCMD("$TERMINAL -n neomutt -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ 0, XF86XK_Mail,		            spawn,		SHCMD("$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks") },
 	{ 0, XF86XK_MyComputer,		      spawn,		SHCMD("$TERMINAL -e $XDG_CONFIG_HOME/vifm/scripts/vifmrun $HOME") },
 	{ 0, XF86XK_WebCam,		          spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 	/* { 0, XF86XK_Battery,		spawn,		SHCMD("") }, */
