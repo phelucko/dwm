@@ -50,7 +50,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	*/
 	/* class                    instance        title       	 tags mask      switchtotag    isfloating   isterminal  noswallow  monitor */
-	{ "Zathura",                  NULL,         NULL,       	    1 << 4,         1,            0,           0,         0,        -1 },
 	{ "libreoffice-calc",         NULL,         NULL,       	    1 << 4,         1,            0,           0,         0,        -1 },
 	{ "libreoffice-impress",      NULL,         NULL,       	    1 << 4,         1,            0,           0,         0,        -1 },
 	{ "libreoffice-writer",       NULL,         NULL,       	    1 << 4,         1,            0,           0,         0,        -1 },
@@ -146,7 +145,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		          spawn,		    SHCMD("sysact") },
 	{ MODKEY,			        XK_w,		          spawn,		    SHCMD("xdotool key super+2 && $BROWSER") },
 	{ MODKEY|ShiftMask,		XK_w,		          spawn,		    SHCMD("$TERMINAL -e nmtui") },
-	{ MODKEY,			        XK_e,		          spawn,		    SHCMD("$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ MODKEY,			        XK_e,		          spawn,		    SHCMD("dwmmutt ; pkill -RTMIN+12 dwmblocks") },
 	{ MODKEY|ShiftMask,		XK_e,		          spawn,		    SHCMD("$TERMINAL -e abook -C $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook") },
 	{ MODKEY,		          XK_r,	            togglescratch,{.ui = 0} },
 	{ MODKEY|ShiftMask,		XK_r,		          spawn,		    SHCMD("dmenuopen") },
@@ -249,7 +248,7 @@ static Key keys[] = {
 	{ 0, XF86XK_DOS,		            spawn,		SHCMD("$TERMINAL") },
 	{ 0, XF86XK_ScreenSaver,	      spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
 	{ 0, XF86XK_TaskPane,		        spawn,		SHCMD("$TERMINAL -e htop") },
-	{ 0, XF86XK_Mail,		            spawn,		SHCMD("$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks") },
+	{ 0, XF86XK_Mail,		            spawn,		SHCMD("dwmmutt ; pkill -RTMIN+12 dwmblocks") },
 	{ 0, XF86XK_MyComputer,		      spawn,		SHCMD("$TERMINAL -e $XDG_CONFIG_HOME/vifm/scripts/vifmrun $HOME") },
 	{ 0, XF86XK_WebCam,		          spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 	/* { 0, XF86XK_Battery,		spawn,		SHCMD("") }, */
