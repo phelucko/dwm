@@ -194,6 +194,8 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+F10\fP \(en Unmount a non-essential drive or Android
 .ITEM
+\f(CWMod+F11\fP \(en Select a Yubikey for GnuPG
+.ITEM
 \f(CWMod+F12\fP \(en Update dwm's colorscheme if you have changed Xresources
 .ITEM
 \f(CWMod+`\fP \(en Select an emoji to copy to clipboard
