@@ -184,6 +184,8 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+F4\fP \(en pulsemixer (audio control)
 .ITEM
+\f(CWMod+F5\fP \(en Update dwm's colorscheme if you have changed Xresources
+.ITEM
 \f(CWMod+F6\fP \(en Transmission torrent client (not installed by default)
 .ITEM
 \f(CWMod+F7\fP \(en Toggle on/off transmission client via dmenu
@@ -196,7 +198,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+F11\fP \(en Select a Yubikey for GnuPG
 .ITEM
-\f(CWMod+F12\fP \(en Update dwm's colorscheme if you have changed Xresources
+\f(CWMod+F12\fP \(en Web search using duckduckgo
 .ITEM
 \f(CWMod+`\fP \(en Select an emoji to copy to clipboard
 .ITEM
