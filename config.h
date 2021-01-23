@@ -219,7 +219,7 @@ static Key keys[] = {
 	{ MODKEY,			        XK_F9,		spawn,		      SHCMD("dmenumount") },
 	{ MODKEY,			        XK_F10,		spawn,		      SHCMD("dmenuumount") },
 	{ MODKEY,             XK_F11,		spawn,		      SHCMD("dmenuyubikey") },
-	{ MODKEY,             XK_F12,		spawn,		      SHCMD("ducksearch") },
+	{ MODKEY,             XK_F12,		spawn,		      SHCMD("dmenusearch") },
 	{ MODKEY,			        XK_space,	view,		        {0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
 
@@ -244,7 +244,7 @@ static Key keys[] = {
 	{ 0, XF86XK_PowerOff,		        spawn,		SHCMD("sysact") },
 	{ 0, XF86XK_Calculator,		      spawn,		SHCMD("$TERMINAL -e bc -l") },
 	{ 0, XF86XK_Sleep,		          spawn,		SHCMD("sudo -A zzz") },
-	{ 0, XF86XK_WWW,		            spawn,		SHCMD("ducksearch") },
+	{ 0, XF86XK_WWW,		            spawn,		SHCMD("dmenusearch") },
 	{ 0, XF86XK_DOS,		            spawn,		SHCMD("$TERMINAL") },
 	{ 0, XF86XK_ScreenSaver,	      spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
 	{ 0, XF86XK_TaskPane,		        spawn,		SHCMD("$TERMINAL -e htop") },
